@@ -10,5 +10,8 @@
     "parcel-bundler": "^1.10.3",
     "pug": "^2.0.3",
     "stylus": "^0.54.5"
+  },
+  "dependencies": {
+    "bulma": "^0.7.2"
   }
 }
