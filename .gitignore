@@ -1,0 +1,11 @@
+# Cache
+.cache/
+
+# Build
+dist/
+
+# Packages
+node_modules/
+
+# Yarn specifics
+yarn-error.log
