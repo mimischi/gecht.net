@@ -1,5 +1,8 @@
-$button-background-color: none;
-$button-border-width: 0;
+@import "./_variables.scss";
+
+.container {
+  margin-bottom: 10rem;
+}
 
 .raise {
   transition: transform 0.3s ease-in-out;
@@ -15,6 +18,10 @@ $button-border-width: 0;
 
 .linkedin--icon {
   color: #0077b5;
+}
+
+.lastfm--icon {
+  color: #d51007;
 }
 
 .background--div {
@@ -59,7 +66,7 @@ $button-border-width: 0;
   }
 }
 
-@media (max-width: 50rem) {
+@media (max-width: 60rem) {
   .background--div {
     width: 100vw;
   }
@@ -75,8 +82,11 @@ $button-border-width: 0;
 // @import "~@fortawesome/fontawesome-free/scss/brands.scss";
 // @import "bulma/css/bulma.css";
 
-@import "~bulma/bulma.sass";
-
-.container {
-  margin-bottom: 10rem;
-}
+@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/layout/section.sass";
+@import "~bulma/sass/elements/button.sass";
+@import "~bulma/sass/elements/icon.sass";
+@import "~bulma/sass/elements/title.sass";
+@import "~bulma/sass/components/navbar.sass";
+@import "~bulma/sass/layout/hero.sass";
