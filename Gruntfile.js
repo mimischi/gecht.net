@@ -37,10 +37,80 @@ module.exports = function(grunt) {
           }
         ]
       }
+    },
+
+    realFavicon: {
+      favicons: {
+        src: "src/assets/favicon.svg",
+        dest: "src/assets/favicons/",
+        options: {
+          iconsPath: "src/assets/favicons/",
+          // html: ["src/assets/favicons/favicons.html"],
+          design: {
+            ios: {
+              pictureAspect: "backgroundAndMargin",
+              backgroundColor: "#ffffff",
+              margin: "14%",
+              assets: {
+                ios6AndPriorIcons: false,
+                ios7AndLaterIcons: true,
+                precomposedIcons: true,
+                declareOnlyDefaultIcon: true
+              }
+            },
+            desktopBrowser: {},
+            windows: {
+              pictureAspect: "noChange",
+              backgroundColor: "#da532c",
+              onConflict: "override",
+              assets: {
+                windows80Ie10Tile: false,
+                windows10Ie11EdgeTiles: {
+                  small: false,
+                  medium: true,
+                  big: false,
+                  rectangle: false
+                }
+              }
+            },
+            androidChrome: {
+              pictureAspect: "noChange",
+              themeColor: "#ffffff",
+              manifest: {
+                name: "MG",
+                startUrl: "https://gecht.net",
+                display: "standalone",
+                orientation: "notSet",
+                onConflict: "override",
+                declared: true
+              },
+              assets: {
+                legacyIcon: false,
+                lowResolutionIcons: false
+              }
+            },
+            safariPinnedTab: {
+              pictureAspect: "blackAndWhite",
+              threshold: 58.59375,
+              themeColor: "#5bbad5"
+            }
+          },
+          settings: {
+            compression: 1,
+            scalingAlgorithm: "NearestNeighbor",
+            errorOnImageTooSmall: false,
+            readmeFile: true,
+            htmlCodeFile: true,
+            usePathAsIs: false
+          }
+        }
+      }
     }
   })
   grunt.loadNpmTasks("grunt-responsive-images")
   grunt.loadNpmTasks("grunt-cwebp")
 
-  grunt.registerTask("default", ["responsive_images", "cwebp"])
+  grunt.loadNpmTasks("grunt-real-favicon")
+
+  grunt.registerTask("default", ["responsive_images", "cwebp", "realFavicon"])
 }
