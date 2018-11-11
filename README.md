@@ -1,9 +1,11 @@
 # Personal portfolio
 
 This is a simple landing page for my personal domain
-([https://gecht.net](https://gecht.net)). This repository was used to play
+[https://gecht.net](https://gecht.net). This repository was used to play
 around with [`parcel`](https://parceljs.org/) for bundling and
 [`bulma`](https://bulma.io/) for the base layout.
+
+![Screenshot of https://gecht.net](.github/screenshot.jpeg)
 
 # Set up
 
@@ -41,7 +43,7 @@ grunt
 `src/assets/favicons/browserconfig.xml`. Make sure to remove the whole path and
 just leave the relative path to each favicon.
 
-Ideally this should be done automatically at some point.
+Ideally this should be done automatically in the future.
 
 ## Running the site locally
 
