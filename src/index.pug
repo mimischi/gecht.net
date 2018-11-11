@@ -29,9 +29,46 @@ html(lang="en")
                 i(class="fab fa-lastfm fa-3x")
           h2(class="subtitle is-unselectable") Hello.
           h1(class="title is-1 is-unselectable") I'm Michael 👨‍💻
-          h2(class="subtitle is-2 is-unselectable") from Frankfurt, Brudi! 
+          h2(class="subtitle is-2 is-unselectable") from Frankfurt, Brudi!
 
       .background--div
-        img(src="assets/nil-castellvi-309290-unsplash.jpg" class="background--img" alt="Photo by Nil Castellví on Unsplash")
+        picture
+          source(
+            media="(min-width: 720px)"
+            srcset="assets/background/dest/nil-castellvi-309290-unsplash-crop-lg_1x.webp 1x, assets/background/dest/nil-castellvi-309290-unsplash-crop-lg_2x.webp 2x"
+            type="image/webp"
+          )
+          source(
+            media="(min-width: 513px)"
+            srcset="assets/background/dest/nil-castellvi-309290-unsplash-crop-md_1x.webp 1x, assets/background/dest/nil-castellvi-309290-unsplash-crop-md_2x.webp 2x"
+            type="image/webp"
+          )
+          source(
+            media="(max-width: 512px)"
+            srcset="assets/background/dest/nil-castellvi-309290-unsplash-crop-sm_1x.webp 1x, assets/background/dest/nil-castellvi-309290-unsplash-crop-sm_2x.webp 2x"
+            type="image/webp"
+          )
+
+          source(
+            media="(min-width: 720px)"
+            srcset="assets/background/dest/nil-castellvi-309290-unsplash-crop-lg_1x.jpg 1x, assets/background/dest/nil-castellvi-309290-unsplash-crop-lg_2x.jpg 2x"
+            type="image/jpeg"
+          )
+          source(
+            media="(min-width: 513px)"
+            srcset="assets/background/dest/nil-castellvi-309290-unsplash-crop-md_1x.jpg 1x, assets/background/dest/nil-castellvi-309290-unsplash-crop-md_2x.jpg 2x"
+            type="image/jpeg"
+          )
+          source(
+            media="(max-width: 512px)"
+            srcset="assets/background/dest/nil-castellvi-309290-unsplash-crop-sm_1x.jpg 1x, assets/background/dest/nil-castellvi-309290-unsplash-crop-sm_2x.jpg 2x"
+            type="image/jpeg"
+          )
+
+          img(
+            src="assets/background/dest/nil-castellvi-309290-unsplash-crop-lg_1x.jpg"
+            class="background--img"
+            alt="Photo by Nil Castellví on Unsplash"
+          )
       //- .unsplash
       //-   a(class="unsplash--link" href="https://unsplash.com/@nilcaste?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Nil Castellví") Photo by Nil Castellví on Unsplash
