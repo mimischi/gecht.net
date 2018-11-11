@@ -23,23 +23,71 @@ html(lang="en")
     section(class="hero is-fullheight")
       div(class="hero-body")
         div(class="container")
+          label(
+            id="hello-label"
+            for="hello"
+            aria-hidden="false"
+            tabindex="0"
+            style="position:absolute; left: -1000px; overflow: hidden;"
+          ) Hello, this is Michael from Frankfurt, brudi.
           div(class="buttons are-large")
-            a(class="button is-rounded raise" href="https://github.com/mimischi" target="_blank" rel="noopener noreferrer")
+            a(
+              class="button is-rounded raise"
+              href="https://github.com/mimischi"
+              aria-label="Michael Gecht on GitHub.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              )
               span.icon
                 i(class="fab fa-github fa-3x")
-            a(class="button is-rounded raise" href="https://twitter.com/_mischi" target="_blank" rel="noopener noreferrer")
+            a(
+              class="button is-rounded raise"
+              href="https://twitter.com/_mischi"
+              aria-label="Michael Gecht on Twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              )
               span(class="icon twitter--icon")
                 i(class="fab fa-twitter fa-3x")
-            a(class="button is-rounded raise" href="https://www.linkedin.com/in/michael-gecht" target="_blank" rel="noopener noreferrer")
+            a(
+              class="button is-rounded raise"
+              href="https://www.linkedin.com/in/michael-gecht"
+              aria-label="Michael Gecht on LinkedIn.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              )
               span(class="icon linkedin--icon")
                 i(class="fab fa-linkedin fa-3x")
-            a(class="button is-rounded raise" style="padding-left: 4px; padding-right: 4px" href="https://orcid.org/0000-0002-4643-6593" target="_blank" rel="noopener noreferrer")
+            a(
+              class="button is-rounded raise"
+              style="padding-left: 4px; padding-right: 4px"
+              href="https://orcid.org/0000-0002-4643-6593"
+              aria-label="Michael Gecht on ORCID.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              )
               span(class="icon" style="width:48px; height:48px")
-                img(src="assets/vector_iD_icon.svg")
-            a(class="button is-rounded raise" href="https://www.last.fm/user/bloodliner" target="_blank" rel="noopener noreferrer")
+                img(
+                  src="assets/vector_iD_icon.svg"
+                  alt=""
+                  aria-hidden="true"
+                  )
+            a(
+              class="button is-rounded raise"
+              href="https://www.last.fm/user/bloodliner"
+              aria-label="Michael Gecht on Last.fm"
+              target="_blank"
+              rel="noopener noreferrer"
+              )
               span(class="icon lastfm--icon")
                 i(class="fab fa-lastfm fa-3x")
-          h2(class="subtitle is-unselectable") Hello.
+
+          h2(
+            class="subtitle is-unselectable"
+            id="hello"
+            role="main"
+            aria-labelledby="hello-label"
+            ) Hello.
           h1(class="title is-1 is-unselectable") I'm Michael 👨‍💻
           h2(class="subtitle is-2 is-unselectable") from Frankfurt, Brudi!
 
